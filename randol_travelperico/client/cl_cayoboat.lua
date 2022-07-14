@@ -131,7 +131,7 @@ end)
 --- RETURN BOAT
 
 CreateThread(function()
-    local returnblip = AddBlipForCoord(4930.81, -5175.23, 2.46) --vector3(4930.81, -5175.23, 2.46)
+    local returnblip = AddBlipForCoord(4930.81, -5175.23, 2.46)
     SetBlipSprite(returnblip, 404)
     SetBlipColour(returnblip, 2)
     SetBlipScale(returnblip, 0.8)
@@ -149,7 +149,7 @@ function CayoReturnGuy()
             Wait(0)
         end
 
-        returngeeza = CreatePed(4, "csb_miguelmadrazo" , 4929.34, -5174.51, 1.48, 265.74, false, false) --vector4(4929.34, -5174.51, 2.48, 265.74)
+        returngeeza = CreatePed(4, "csb_miguelmadrazo" , 4929.34, -5174.51, 1.48, 265.74, false, false)
 
         SetEntityAsMissionEntity(returngeeza)
         SetBlockingOfNonTemporaryEvents(returngeeza, true)
@@ -190,7 +190,7 @@ AddEventHandler('randol_cayoboat:client:return', function()
 	
 	if HasModelLoaded(returnboatmodel) and HasModelLoaded(returnboatped) then
         TriggerServerEvent('randol_cayoboat:boatcooldown')
-		local returnToroBoat = CreateVehicle(returnboatmodel, 4933.01, -5171.59, -0.56, true, false) --vector4(4933.01, -5171.59, -0.56, 61.45)
+		local returnToroBoat = CreateVehicle(returnboatmodel, 4933.01, -5171.59, -0.56, true, false)
 		exports['ps-fuel']:SetFuel(returnToroBoat, 100.0)
         SetEntityHeading(returnToroBoat, 61.45)
 		SetEntityAsMissionEntity(returnToroBoat, true, true)
